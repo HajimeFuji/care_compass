@@ -1,12 +1,20 @@
 <?php get_header(); ?>
 
-<main class="main">
-    <div class="main-flex">
-        <div class="top-wrap">   
-            <section class="outdoors-wrap">
-                <div class="outdoors-content">
+<article class="article">
+    <section id="sec1-title">
+        <h1>訪問看護事業所の一覧</h1>
+        <!-- <div class="text">
+            <p><?php bloginfo( 'description' ); ?></p>
+        </div> -->
+    </section>
+
+    <main class="main">
+        <div class="main-flex">
+            <section class="top-wrap">
+                <h2><?php the_field('kaigo_name'); ?></h2>
+                <div class="top-card-wrap">
                     <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
-                        <div class="outdoors-single" >
+                        <div class="office-card" >
                             <h2><?php the_field('blog_date'); ?>_<?php the_title(); ?></h2>
                             <!-- <div class="single_thumbnail"> -->
                                 <!-- <?php the_post_thumbnail(array(600,450)); ?> -->
@@ -28,16 +36,17 @@
                 </div>
             </section>
         </div>
-        <div class="original-sidebar">
-            <div>
-                <?php get_sidebar(); ?>
-            </div>
-            <div>
-                <?php dynamic_sidebar('main-sidebar'); ?>
-            </div>
+
+        <div class="returnbox">
+            <a class="btn2__text" href="#">
+                <div class="btn2">
+                    <p class="btn2__text">page top</p>
+                </div>
+            </a>
         </div>
 
-    </div>
-</main>
+    </main>
+
+</article>
 
 <?php get_footer(); ?>
