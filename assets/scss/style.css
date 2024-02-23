@@ -257,11 +257,14 @@ header li:hover {
   width: 24px;
   height: 13.5px;
 }
+.article {
+  background: #79B3F6;
+}
 /* ---section1(first view)--- */
 #sec1-firstview {
-  height: 450px;
+  height: 45px;
   padding: 40px 0;
-  background: url(../img/aurora.jpg) no-repeat center center;
+  background: #79B3F6;
   background-size: cover;
   color: #ffffff;
 }

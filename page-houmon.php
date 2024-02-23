@@ -1,42 +1,50 @@
 
 
-<?php get_header("noheader"); ?>
+<?php get_header(); ?>
 
 
 <article class="article">
     <section id="sec1-title">
-        <h1><?php bloginfo('name'); ?></h1>
-        <div class="text">
+        <h1>自宅に訪問してくれるサービスを探す</h1>
+        <!-- <div class="text">
             <p><?php bloginfo( 'description' ); ?></p>
-        </div>
+        </div> -->
     </section>
 
     <main class="main">
         <div class="main-flex">
             <section class="top-wrap">
-                <h1>あなたのお困りごとは何ですか</h1>
+                <h2>専門知識を持った事業者が訪問し、サービスを提供します</h2>
                 <div class="top-card-wrap">
-                    <a href="/soudan">
+                    <a href="/homehelp">
                         <div class="top-card" >
-                            <p>介護の相談をしたい<br>ケアマネージャーを探したい</p>
+                            <p>訪問介護</p>
                         </div>
                     </a>
-                    <a href="/houmon">
+                    <a href="/kango">
                         <div class="top-card" >
-                            <p>自宅に訪問してくれるサービスを探したい</p>
+                            <p>訪問看護</p>
                         </div>
                     </a>
-                    <a href="/tuusyo">
+                    <a href="/rihabili">
                         <div class="top-card" >
-                            <p>自宅から通えるサービスを探したい</p>
+                            <p>訪問リハビリ</p>
                         </div>
                     </a>
+                    <a href="/nyuuyoku">
+                        <div class="top-card" >
+                            <p>訪問入浴</p>
+                        </div>
+                    </a>
+                    <a href="/fukushi">
+                        <div class="top-card" >
+                            <p>福祉用具貸与・販売</p>
+                        </div>
+                    </a>
+
                 </div>
             </section>
 
-            <div class="search">
-                <p>事業所検索ボックス</p>
-            </div>
         </div>
 
         <div class="returnbox">

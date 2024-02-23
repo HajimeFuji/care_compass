@@ -1,42 +1,35 @@
 
 
-<?php get_header("noheader"); ?>
+<?php get_header(); ?>
 
 
 <article class="article">
     <section id="sec1-title">
-        <h1><?php bloginfo('name'); ?></h1>
-        <div class="text">
+        <h1>ケアマネージャーを探す</h1>
+        <!-- <div class="text">
             <p><?php bloginfo( 'description' ); ?></p>
-        </div>
+        </div> -->
     </section>
 
     <main class="main">
         <div class="main-flex">
             <section class="top-wrap">
-                <h1>あなたのお困りごとは何ですか</h1>
+                <h2>介護認定によって相談窓口が異なります</h2>
+                <h2>包括支援センターはお住まいの地区ごとにあります</h2>
                 <div class="top-card-wrap">
-                    <a href="/soudan">
+                    <a href="/houkatu">
                         <div class="top-card" >
-                            <p>介護の相談をしたい<br>ケアマネージャーを探したい</p>
+                            <p>包括支援センター</p>
                         </div>
                     </a>
-                    <a href="/houmon">
+                    <a href="/kyotaku">
                         <div class="top-card" >
-                            <p>自宅に訪問してくれるサービスを探したい</p>
-                        </div>
-                    </a>
-                    <a href="/tuusyo">
-                        <div class="top-card" >
-                            <p>自宅から通えるサービスを探したい</p>
+                            <p>居宅介護支援事業所</p>
                         </div>
                     </a>
                 </div>
             </section>
 
-            <div class="search">
-                <p>事業所検索ボックス</p>
-            </div>
         </div>
 
         <div class="returnbox">

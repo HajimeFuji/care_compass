@@ -18,7 +18,7 @@
     <header>
         <div class="header__pc">
             <div class="header__text">
-                <p>My Activity Note</p>
+                <p><?php bloginfo('name'); ?></p>
             </div>
             <nav class="header header-menu">
                 <div>
