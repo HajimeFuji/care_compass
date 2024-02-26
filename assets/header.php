@@ -7,34 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <meta name="keywords" content="キーワードでサイトを説明">
     <meta name="description" content="どんなサイトか短い文章で説明">
-    <title>
-        <?php if(is_home()): ?>
-        <?php bloginfo('name'); ?>
-
-        <?php elseif(is_page()): ?>
-        <?php wp_title(''); ?> | <?php bloginfo('name'); ?>
-
-        <?php elseif(is_single()): ?>
-        <?php wp_title(''); ?> | <?php bloginfo('name'); ?>
-
-        <?php elseif(is_category()): ?>
-        <?php single_cat_title() ?>の記事一覧 | <?php bloginfo('name'); ?>
-
-        <?php elseif(is_month()): ?>
-        <?php the_time("Y年m月") ?>の記事一覧 | <?php bloginfo('name'); ?>
-
-        <?php elseif(is_year()): ?>
-        <?php the_time("Y年") ?>の記事一覧 | <?php bloginfo('name'); ?>
-
-        <?php elseif(is_search()): ?>
-        検索結果 | <?php bloginfo('name'); ?>
-
-        <?php else: ?>
-        <?php bloginfo('name'); ?>
-
-        <?php endif; ?>
-
-    </title>
+    <title><?php bloginfo('name'); ?></title>
 
     <?php wp_head(); ?>
     

@@ -16,7 +16,7 @@
             <section class="top-wrap">
                 <h1>あなたのお困りごとは何ですか</h1>
                 <div class="top-card-wrap">
-                    <a href="/soudan">
+                    <a href="/soudansaki">
                         <div class="top-card" >
                             <p>介護の相談をしたい<br>ケアマネージャーを探したい</p>
                         </div>

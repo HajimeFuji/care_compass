@@ -1,6 +1,6 @@
 <?php 
 /*
-Template Name: アーカイブ_一覧_リハビリ
+Template Name: アーカイブ_一覧_デイサービス
 Template Post Type: page, post
 */
 ?>
@@ -10,7 +10,7 @@ Template Post Type: page, post
 
 <article class="article">
     <section id="sec1-title">
-        <h1>訪問リハビリ事業所の一覧</h1>
+        <h1>通所介護デイサービス事業所の一覧</h1>
     </section>
     
     <main class="main">
@@ -22,8 +22,8 @@ Template Post Type: page, post
                             $args = [
                                 'post_type' => 'kaigo', //カスタム投稿タイプ名
                                 'posts_per_page' => -1, //取得する投稿の件数
-                                'category_name' => 'houmon',
-                                'tag' => 'rihabili',
+                                'category_name' => 'tuusyo',
+                                'tag' => 'dayservice',
                                 'orderby'   => 'title',
                             ];
                             $my_query = new WP_Query( $args );

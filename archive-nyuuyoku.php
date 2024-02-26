@@ -1,6 +1,6 @@
 <?php 
 /*
-Template Name: アーカイブ_一覧_リハビリ
+Template Name: アーカイブ_一覧_入浴
 Template Post Type: page, post
 */
 ?>
@@ -10,7 +10,7 @@ Template Post Type: page, post
 
 <article class="article">
     <section id="sec1-title">
-        <h1>訪問リハビリ事業所の一覧</h1>
+        <h1>訪問入浴事業所の一覧</h1>
     </section>
     
     <main class="main">
@@ -23,7 +23,7 @@ Template Post Type: page, post
                                 'post_type' => 'kaigo', //カスタム投稿タイプ名
                                 'posts_per_page' => -1, //取得する投稿の件数
                                 'category_name' => 'houmon',
-                                'tag' => 'rihabili',
+                                'tag' => 'nyuuyoku',
                                 'orderby'   => 'title',
                             ];
                             $my_query = new WP_Query( $args );
