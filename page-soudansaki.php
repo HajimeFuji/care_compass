@@ -5,17 +5,14 @@
 
 <article class="article">
     <section id="sec1-title">
-        <h1>ケアマネージャーを探す</h1>
-        <!-- <div class="text">
-            <p><?php bloginfo( 'description' ); ?></p>
-        </div> -->
+        <h1><?php the_title(); ?></h1>
     </section>
 
     <main class="main">
         <div class="main-flex">
             <section class="top-wrap">
-                <h2>介護認定によって相談窓口が異なります</h2>
-                <h2>包括支援センターはお住まいの地区ごとにあります</h2>
+                <h2><?php echo wpautop( get_the_content() ); ?></h2>
+                <!-- <h2>包括支援センターはお住まいの地区ごとにあります</h2> -->
                 <div class="top-card-wrap">
                     <a href="/houkatu">
                         <div class="top-card" >
@@ -43,9 +40,6 @@
 
     </main>
 </article>
-
-
-
 
 
 <?php get_footer(); ?>

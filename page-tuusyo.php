@@ -5,16 +5,13 @@
 
 <article class="article">
     <section id="sec1-title">
-        <h1>自宅から通いのサービスを探す</h1>
-        <!-- <div class="text">
-            <p><?php bloginfo( 'description' ); ?></p>
-        </div> -->
+        <h1><?php the_title(); ?></h1>
     </section>
 
     <main class="main">
         <div class="main-flex">
             <section class="top-wrap">
-                <h2>送迎により通いのサービスを提供してくれます</h2>
+                <h2><?php the_content(); ?></h2>
                 <div class="top-card-wrap">
                     <a href="/dayservice">
                         <div class="top-card" >
@@ -58,3 +55,5 @@
 
     </main>
 </article>
+
+<?php get_footer(); ?>
