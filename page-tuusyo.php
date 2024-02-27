@@ -13,27 +13,27 @@
             <section class="top-wrap">
                 <h2><?php the_content(); ?></h2>
                 <div class="top-card-wrap">
-                    <a href="/dayservice">
+                    <a href="<?php echo esc_url( home_url() ); ?>/dayservice">
                         <div class="top-card" >
                             <p>通所介護デイサービス</p>
                         </div>
                     </a>
-                    <a href="/daycare">
+                    <a href="<?php echo esc_url( home_url() ); ?>/daycare">
                         <div class="top-card" >
                             <p>通所リハビリデイケア</p>
                         </div>
                     </a>
-                    <a href="/shortstay">
+                    <a href="<?php echo esc_url( home_url() ); ?>/shortstay">
                         <div class="top-card" >
                             <p>短期入所ショートステイ</p>
                         </div>
                     </a>
-                    <a href="/ssmulti">
+                    <a href="<?php echo esc_url( home_url() ); ?>/ssmulti">
                         <div class="top-card" >
                             <p>小規模多機能</p>
                         </div>
                     </a>
-                    <a href="/cssmulti">
+                    <a href="<?php echo esc_url( home_url() ); ?>/cssmulti">
                         <div class="top-card" >
                             <p>看護小規模多機能</p>
                         </div>

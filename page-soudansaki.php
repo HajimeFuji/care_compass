@@ -14,12 +14,12 @@
                 <h2><?php echo wpautop( get_the_content() ); ?></h2>
                 <!-- <h2>包括支援センターはお住まいの地区ごとにあります</h2> -->
                 <div class="top-card-wrap">
-                    <a href="/houkatu">
+                    <a href="<?php echo esc_url( home_url() ); ?>/houkatu">
                         <div class="top-card" >
                             <p>包括支援センター</p>
                         </div>
                     </a>
-                    <a href="/kyotaku">
+                    <a href="<?php echo esc_url( home_url() ); ?>/kyotaku">
                         <div class="top-card" >
                             <p>居宅介護支援事業所</p>
                         </div>

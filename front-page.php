@@ -16,17 +16,17 @@
             <section class="top-wrap">
                 <h1>あなたのお困りごとは何ですか</h1>
                 <div class="top-card-wrap">
-                    <a href="/soudansaki">
+                    <a href="<?php echo esc_url( home_url() ); ?>/soudansaki">
                         <div class="top-card" >
                             <p>介護の相談をしたい<br>ケアマネージャーを探したい</p>
                         </div>
                     </a>
-                    <a href="/houmon">
+                    <a href="<?php echo esc_url( home_url() ); ?>/houmon">
                         <div class="top-card" >
                             <p>自宅に訪問してくれるサービスを探したい</p>
                         </div>
                     </a>
-                    <a href="/tuusyo">
+                    <a href="<?php echo esc_url( home_url() ); ?>/tuusyo">
                         <div class="top-card" >
                             <p>自宅から通えるサービスを探したい</p>
                         </div>
@@ -36,6 +36,7 @@
 
             <div class="search">
                 <p>事業所検索ボックス</p>
+                <?php get_search_form(); ?>
             </div>
         </div>
 

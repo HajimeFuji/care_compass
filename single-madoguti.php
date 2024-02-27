@@ -36,6 +36,12 @@ Template Post Type: page, post
                         <div class="detail-card__box">
                             <p class="detail-card__txt">住所：<?php the_field('soudan_address'); ?></p>
                             <p class="detail-card__txt">電話：<?php the_field('soudan_tel'); ?></p>
+                            <?php if( get_field('soudan_link') ): { ?>
+                                <a href="<?php the_field('soudan_link'); ?>"><p class="detail-card__txt">公式サイトはこちら</p></a>
+                            <?php } ?>
+                            <?php else: ?>
+                                    <p class="detail-card__txt">公式サイトはありません</p>
+                            <?php endif; ?>
                         </div>
                         <div class="detail-card__box">
                             <!-- <p class="detail-card__txt__area">サービス概要：<?php the_field('soudan_service'); ?></p> -->

@@ -13,27 +13,27 @@
             <section class="top-wrap">
                 <h2><?php the_content(); ?></h2>
                 <div class="top-card-wrap">
-                    <a href="/homehelp">
+                    <a href="<?php echo esc_url( home_url() ); ?>/homehelp">
                         <div class="top-card" >
                             <p>訪問介護</p>
                         </div>
                     </a>
-                    <a href="/kango">
+                    <a href="<?php echo esc_url( home_url() ); ?>/kango">
                         <div class="top-card" >
                             <p>訪問看護</p>
                         </div>
                     </a>
-                    <a href="/rihabili">
+                    <a href="<?php echo esc_url( home_url() ); ?>/rihabili">
                         <div class="top-card" >
                             <p>訪問リハビリ</p>
                         </div>
                     </a>
-                    <a href="/nyuuyoku">
+                    <a href="<?php echo esc_url( home_url() ); ?>/nyuuyoku">
                         <div class="top-card" >
                             <p>訪問入浴</p>
                         </div>
                     </a>
-                    <a href="/fukushi">
+                    <a href="<?php echo esc_url( home_url() ); ?>/fukushi">
                         <div class="top-card" >
                             <p>福祉用具貸与・販売</p>
                         </div>
