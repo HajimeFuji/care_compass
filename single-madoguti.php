@@ -45,7 +45,8 @@ Template Post Type: page, post
                         </div>
                         <div class="detail-card__box">
                             <!-- <p class="detail-card__txt__area">サービス概要：<?php the_field('soudan_service'); ?></p> -->
-                            <p class="detail-card__txt">サービス概要：<?php echo nl2br(get_post_meta($post->ID, 'soudan_service', true)); ?></p>
+                            <p>サービス概要：</p>
+                            <p class="detail-card__txt"><?php echo nl2br(get_post_meta($post->ID, 'soudan_service', true)); ?></p>
                             <!-- <p class="detail-card__txt__area">PR：<?php the_field('soudan_pr'); ?></p> -->
                         </div>
                     </div>
