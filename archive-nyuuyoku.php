@@ -10,13 +10,13 @@ Template Post Type: page, post
 
 <article class="article">
     <section id="sec1-title">
-        <h1>訪問入浴事業所の一覧</h1>
+        <h1><?php the_title(); ?></h1>
     </section>
     
     <main class="main">
         <div class="main-flex">
                 <section class="top-wrap">
-                    <h2><?php the_content(); ?></h2>
+                    <p><?php the_content(); ?></p>
                     <div class="office-card-wrap">
                         <?php
                             $args = [
@@ -33,9 +33,9 @@ Template Post Type: page, post
                             <?php while ($my_query -> have_posts()) : $my_query -> the_post(); ?>
                             <a href="<?php the_permalink(); ?>">
                                 <div class="office-card" >
-                                    <h3 class="office-card__txt">事業所名：<?php echo nl2br(get_post_meta($post->ID, 'kaigo_name', true)); ?></h3>
-                                    <h3 class="office-card__txt">住所：<?php the_field('kaigo_address'); ?></h3>
-                                    <h3 class="office-card__txt">電話：<?php the_field('kaigo_tel'); ?></h3>
+                                    <h2 class="office-card__title"><?php echo nl2br(get_post_meta($post->ID, 'kaigo_name', true)); ?></h2 >
+                                    <h4  class="office-card__txt">住所：<?php the_field('kaigo_address'); ?></h4 >
+                                    <h4  class="office-card__txt">電話：<?php the_field('kaigo_tel'); ?></h4 >
                                 </div>
                             </a>
 

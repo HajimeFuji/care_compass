@@ -2,3 +2,4 @@
 06/21/23 5:10:26: style.scss - Incompatible units px and vw.: style.scss on line 333, at column 9
 Call Stack:
 #0 mixin mq style.scss on line 335
+02/27/24 11:45:56: style.scss - unclosed block: failed at `` C:\Users\HajimeFujii\Local Sites\carecompass\app\public\wp-content\themes\carecompass\assets\scss\style.scss on line 331, at column 0

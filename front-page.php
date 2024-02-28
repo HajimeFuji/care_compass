@@ -7,28 +7,31 @@
     <section id="sec1-title">
         <h1><?php bloginfo('name'); ?></h1>
         <div class="text">
-            <p><?php bloginfo( 'description' ); ?></p>
+            <h2><?php bloginfo( 'description' ); ?></h2>
         </div>
     </section>
 
     <main class="main">
         <div class="main-flex">
             <section class="top-wrap">
-                <h1>あなたのお困りごとは何ですか</h1>
+                <h2>あなたのお困りごとは何ですか</h2>
                 <div class="top-card-wrap">
                     <a href="<?php echo esc_url( home_url() ); ?>/soudansaki">
                         <div class="top-card" >
-                            <p>介護の相談をしたい<br>ケアマネージャーを探したい</p>
+                            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/soudan_t.png">
+                            <h3>介護の相談をしたい<br>ケアマネージャーを探したい</h3>
                         </div>
                     </a>
                     <a href="<?php echo esc_url( home_url() ); ?>/houmon">
                         <div class="top-card" >
-                            <p>自宅に訪問してくれるサービスを探したい</p>
+                            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/houmon_t.png">
+                            <h3>自宅に訪問してくれる<br>サービスを探したい</h3>
                         </div>
                     </a>
                     <a href="<?php echo esc_url( home_url() ); ?>/tuusyo">
                         <div class="top-card" >
-                            <p>自宅から通えるサービスを探したい</p>
+                            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/tuusyo_t.png">
+                            <h3>自宅から通える<br>サービスを探したい</h3>
                         </div>
                     </a>
                 </div>

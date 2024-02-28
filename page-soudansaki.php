@@ -11,17 +11,19 @@
     <main class="main">
         <div class="main-flex">
             <section class="top-wrap">
-                <h2><?php echo wpautop( get_the_content() ); ?></h2>
+                <p><?php echo wpautop( get_the_content() ); ?></p>
                 <!-- <h2>包括支援センターはお住まいの地区ごとにあります</h2> -->
                 <div class="top-card-wrap">
                     <a href="<?php echo esc_url( home_url() ); ?>/houkatu">
                         <div class="top-card" >
-                            <p>包括支援センター</p>
+                            <h3 class="top-card__title">包括支援センター</h3>
+                            <p>要支援 1～2 の方はこちらへ</p>
                         </div>
                     </a>
                     <a href="<?php echo esc_url( home_url() ); ?>/kyotaku">
                         <div class="top-card" >
-                            <p>居宅介護支援事業所</p>
+                            <h3 class="top-card__title">居宅介護支援事業所</h3>
+                            <p>要介護 1～5 の方はこちらへ</p>
                         </div>
                     </a>
                 </div>

@@ -32,19 +32,28 @@ img {
 }
 /* --------------------------------------------------- */
 body {
-  font-family: "Noto Sans Japanese", "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "ヒラギノ角ゴ ProN W3", "Hiragino Kaku Gothic ProN", "游ゴシック", YuGothic, "メイリオ", "Meiryo", "HGPｺﾞｼｯｸM", "Osaka", "ＭＳ Ｐゴシック", sans-serif, Century Gothic, Arial;
+  font-family: "Noto Serif JP", "Noto Sans JP", serif, sans-serif;
   color: #3b4043;
 }
 h1 {
   font-size: 36px;
   margin: 24px;
+  text-align: center;
 }
 h2 {
+  font-size: 24px;
+  margin: 16px 0 24px;
+  text-align: center;
+}
+h3 {
   font-size: 20px;
-  margin: 10px 0;
+  font-family: "Noto serif JP";
+  margin: 16px 0 24px;
+  text-align: center;
 }
 p {
   text-align: left;
+  font-family: "Noto Serif JP";
 }
 /* ---header--- */
 header {
@@ -267,6 +276,7 @@ header li:hover {
 #sec1-title h1 {
   padding: 60px 0 0 0;
   margin: 0 auto;
+  font-weight: bold;
 }
 @media screen and (max-width: 599px) {
   #sec1-title h1 {
@@ -278,7 +288,7 @@ header li:hover {
   display: flex;
   width: 70%;
   justify-content: center;
-  margin: 16px auto;
+  margin: 0 auto;
   font-size: 24px;
 }
 .main {
@@ -292,7 +302,7 @@ header li:hover {
 .top-wrap {
   max-width: 1100px;
   margin: 0 auto;
-  padding-bottom: 40px;
+  padding-bottom: 24px;
 }
 @media screen and (max-width: 599px) {
   .top-wrap {
@@ -301,6 +311,9 @@ header li:hover {
 }
 .top-wrap p {
   text-align: center;
+  font-size: 24px;
+  margin-top: 16px;
+  margin-bottom: 40px;
 }
 .top-card-wrap {
   display: flex;
@@ -323,8 +336,9 @@ header li:hover {
   margin-left: calc(((1100px - 975px) / 6));
   margin-right: calc(((1100px - 975px) / 6));
   display: flex;
+  flex-flow: column;
   text-align: center;
-  justify-content: center;
+  justify-content: space-around;
   align-items: center;
 }
 @media screen and (max-width: 599px) {
@@ -333,23 +347,23 @@ header li:hover {
     margin-bottom: 16px;
   }
 }
-.top-card__img {
-  width: 100%;
-  margin-bottom: 10px;
-}
-.top-card__txt {
-  font-size: 16px;
-  font-weight: bold;
-  text-align: center;
-  align-items: center;
+.top-card__title {
+  font-size: 24px;
+  margin-top: 40px;
 }
 .top-card p {
   font-size: 20px;
   width: 90%;
 }
+.top-card img {
+  width: 30%;
+  aspect-ratio: 1;
+  margin-top: 16px;
+}
 .office-card-wrap {
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
   max-width: 1100px;
 }
 @media screen and (max-width: 599px) {
@@ -370,7 +384,6 @@ header li:hover {
   display: flex;
   flex-flow: column;
   justify-content: center;
-  align-items: start;
 }
 @media screen and (max-width: 599px) {
   .office-card {
@@ -378,14 +391,22 @@ header li:hover {
     margin-bottom: 16px;
   }
 }
-.office-card__img {
-  width: 100%;
-  margin-bottom: 10px;
+.office-card__title {
+  text-align: left;
+  font-size: 18px;
+  font-weight: bold;
+  font-family: "Noto serif JP";
+  padding-left: 16px;
+  line-height: 1.8;
 }
 .office-card__txt {
-  font-size: 16px;
+  text-align: left;
+  font-size: 14px;
   font-weight: bold;
+  font-family: "Noto serif JP";
   padding-left: 16px;
+  margin-bottom: 12px;
+  line-height: 1.8;
 }
 .detail-wrap {
   max-width: 1100px;
@@ -405,6 +426,7 @@ header li:hover {
 .detail-card {
   display: flex;
   flex-flow: column;
+  width: 500px;
   row-gap: 32px;
   margin-bottom: 32px;
 }
@@ -424,6 +446,14 @@ header li:hover {
 }
 .detail-card__txt__area {
   white-space: pre-wrap;
+}
+.detail-card a {
+  color: #0062ff;
+}
+.detail-card a:hover {
+  /*マウスが上に乗っている状態*/
+  color: #0062ff;
+  text-decoration: underline;
 }
 /* ---searchform.php--- */
 .search {
@@ -470,6 +500,19 @@ header li:hover {
   font-size: 16px;
   color: #fff;
   line-height: 31px;
+}
+/* ---header--- */
+header {
+  font-family: "Noto Serif JP";
+  background-color: rgba(255, 204, 153, 0.5);
+}
+header a {
+  color: #404040;
+  font-weight: bold;
+}
+header p {
+  color: #404040;
+  font-weight: bold;
 }
 /* ---footer--- */
 footer {
@@ -544,14 +587,6 @@ footer .copyright {
   font-size: 14px;
   font-weight: bold;
   text-align: start;
-}
-.outdoors-single a {
-  color: #0062ff;
-}
-.outdoors-single a:hover {
-  /*マウスが上に乗っている状態*/
-  color: #0062ff;
-  text-decoration: underline;
 }
 .blogpost-form-wrap {
   margin: 0 auto;
