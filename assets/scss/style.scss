@@ -153,6 +153,14 @@
 
 
 // 事業所詳細 single-$slug.php
+.detail-card__title{
+    padding: 20px 10px 5px 5px;
+}
+
+.detail-card__box{
+    box-shadow: 0px 5px 15px 0px rgba(0,128,0, 0.96);
+}
+
 .detail-wrap{
     max-width: 1100px;
     margin: 0 auto;
@@ -168,7 +176,7 @@
 .detail_img{
     aspect-ratio: 1/1;
     object-fit: cover;
-    width: 50%;
+    width: 40%;
 }
 
 .detail-card{
@@ -190,8 +198,11 @@
     &__txt {
         font-family: 'Noto Sans JP';
         text-align: left;
+        line-height:1.5;
+        margin-left: 15px;
         &__area {
             white-space: pre-wrap;
+            margin-left: 15px;
         }
     }
 }
