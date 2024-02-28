@@ -7,7 +7,7 @@
     <section id="sec1-title">
         <h1><?php bloginfo('name'); ?></h1>
         <div class="text">
-            <h2><?php bloginfo( 'description' ); ?></h2>
+            <h2>江別市の在宅介護<br class="pc-none"> サービス事業所一覧サイト</h2>
         </div>
     </section>
 
