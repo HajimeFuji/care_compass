@@ -11,31 +11,36 @@
     <main class="main">
         <div class="main-flex">
             <section class="top-wrap">
-                <h2><?php the_content(); ?></h2>
+                <p><?php the_content(); ?></p>
                 <div class="top-card-wrap">
                     <a href="<?php echo esc_url( home_url() ); ?>/dayservice">
                         <div class="top-card" >
-                            <p>通所介護デイサービス</p>
+                            <h3 class="top-card__title">通所介護デイサービス</h3>
+                            <p>通って過ごせるところを<br>探している方はこちら</p>
                         </div>
                     </a>
                     <a href="<?php echo esc_url( home_url() ); ?>/daycare">
                         <div class="top-card" >
-                            <p>通所リハビリデイケア</p>
+                            <h3 class="top-card__title">通所リハビリデイケア</h3>
+                            <p>通ってリハビリできるところを<br>探している方はこちら</p>
                         </div>
                     </a>
                     <a href="<?php echo esc_url( home_url() ); ?>/shortstay">
                         <div class="top-card" >
-                            <p>短期入所ショートステイ</p>
+                            <h3 class="top-card__title">短期入所ショートステイ</h3>
+                            <p>数日お泊りできることを<br>探している方はこちら</p>
                         </div>
                     </a>
                     <a href="<?php echo esc_url( home_url() ); ?>/ssmulti">
                         <div class="top-card" >
-                            <p>小規模多機能</p>
+                            <h3 class="top-card__title">小規模多機能</h3>
+                            <p>通い中心で状況により訪問や<br>お泊まりを頼みたい方はこちら</p>
                         </div>
                     </a>
                     <a href="<?php echo esc_url( home_url() ); ?>/cssmulti">
                         <div class="top-card" >
-                            <p>看護小規模多機能</p>
+                            <h3 class="top-card__title">看護小規模多機能</h3>
+                            <p>通い中心で状況により訪問看護や<br>お泊まりを頼みたい方はこちら</p>
                         </div>
                     </a>
 
