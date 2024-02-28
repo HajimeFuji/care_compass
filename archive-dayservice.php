@@ -54,8 +54,6 @@ Template Post Type: page, post
                         </div>
                     </a>
                 </div>
-
-        
     </main>
 
 </article>
