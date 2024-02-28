@@ -387,6 +387,12 @@ header li:hover {
   font-weight: bold;
   padding-left: 16px;
 }
+.detail-card__title {
+  padding: 20px 10px 5px 5px;
+}
+.detail-card__box {
+  box-shadow: 0px 5px 15px 0px rgba(0, 128, 0, 0.96);
+}
 .detail-wrap {
   max-width: 1100px;
   margin: 0 auto;
@@ -400,11 +406,12 @@ header li:hover {
 .detail_img {
   aspect-ratio: 1;
   object-fit: cover;
-  width: 50%;
+  width: 40%;
 }
 .detail-card {
   display: flex;
   flex-flow: column;
+  width: 500px;
   row-gap: 32px;
   margin-bottom: 32px;
 }
@@ -421,9 +428,12 @@ header li:hover {
 .detail-card__txt {
   font-family: "Noto Sans JP";
   text-align: left;
+  line-height: 1.5;
+  margin-left: 15px;
 }
 .detail-card__txt__area {
   white-space: pre-wrap;
+  margin-left: 15px;
 }
 /* ---searchform.php--- */
 .search {
