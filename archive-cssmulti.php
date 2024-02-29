@@ -33,7 +33,7 @@ Template Post Type: page, post
                             <?php while ($my_query -> have_posts()) : $my_query -> the_post(); ?>
                             <a href="<?php the_permalink(); ?>">
                                 <div class="office-card" >
-                                    <h2 class="office-card__title"><?php echo nl2br(get_post_meta($post->ID, 'kaigo_name', true)); ?></h2>
+                                    <h2 class="office-card__title"><?php the_title(); ?></h2>
                                     <h4 class="office-card__txt">住所：<?php the_field('kaigo_address'); ?></h4>
                                     <h4 class="office-card__txt">電話：<?php the_field('kaigo_tel'); ?></h4>
                                 </div>

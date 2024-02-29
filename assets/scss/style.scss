@@ -18,7 +18,8 @@
 #sec1-title h1{
     padding:60px 0 0 0 ;
     margin: 0 auto;
-    font-weight: bold;
+    font-family: 'Noto Serif JP';
+    // font-weight: bold;
     @include mq(sp) {
         padding: 0;
         margin: 0 auto;
@@ -196,7 +197,7 @@
     &__title {
         margin-bottom: 32px;
         font-weight: 500;
-        font-size: 32px;
+        font-size: 24px;
     }
     &__txt {
         font-family: 'Noto Sans JP';
