@@ -304,7 +304,7 @@ header li:hover {
 #sec1-title h1 {
   padding: 60px 0 0 0;
   margin: 0 auto;
-  font-weight: bold;
+  font-family: "Noto Serif JP";
 }
 @media screen and (max-width: 599px) {
   #sec1-title h1 {
@@ -475,7 +475,7 @@ header li:hover {
 .detail-card__title {
   margin-bottom: 32px;
   font-weight: 500;
-  font-size: 32px;
+  font-size: 24px;
 }
 .detail-card__txt {
   font-family: "Noto Sans JP";
