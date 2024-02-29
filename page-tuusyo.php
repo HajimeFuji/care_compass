@@ -15,19 +15,19 @@
                 <div class="top-card-wrap">
                     <a href="<?php echo esc_url( home_url() ); ?>/dayservice">
                         <div class="top-card" >
-                            <h3 class="top-card__title">通所介護デイサービス</h3>
+                            <h3 class="top-card__title">通所介護<br>(デイサービス)</h3>
                             <p>通って過ごせるところを<br>探している方はこちら</p>
                         </div>
                     </a>
                     <a href="<?php echo esc_url( home_url() ); ?>/daycare">
                         <div class="top-card" >
-                            <h3 class="top-card__title">通所リハビリデイケア</h3>
+                            <h3 class="top-card__title">通所リハビリ<br>(デイケア)</h3>
                             <p>通ってリハビリできるところを<br>探している方はこちら</p>
                         </div>
                     </a>
                     <a href="<?php echo esc_url( home_url() ); ?>/shortstay">
                         <div class="top-card" >
-                            <h3 class="top-card__title">短期入所ショートステイ</h3>
+                            <h3 class="top-card__title">短期入所<br>(ショートステイ)</h3>
                             <p>数日お泊りできることを<br>探している方はこちら</p>
                         </div>
                     </a>

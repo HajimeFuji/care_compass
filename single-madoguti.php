@@ -37,7 +37,7 @@ Template Post Type: page, post
                             <p class="detail-card__txt">住所：<?php the_field('soudan_address'); ?></p>
                             <p class="detail-card__txt">電話：<?php the_field('soudan_tel'); ?></p>
                             <?php if( get_field('soudan_link') ): { ?>
-                                <a href="<?php the_field('soudan_link'); ?>"><p class="detail-card__txt">公式サイトはこちら</p></a>
+                                <a href="<?php the_field('soudan_link'); ?>" target="_blank" rel="noopener norefferrer"><p class="detail-card__txt">公式サイトはこちら</p></a>
                             <?php } ?>
                             <?php else: ?>
                                     <p class="detail-card__txt">公式サイトはありません</p>

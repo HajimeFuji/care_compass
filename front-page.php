@@ -24,13 +24,13 @@
                     </a>
                     <a href="<?php echo esc_url( home_url() ); ?>/houmon">
                         <div class="top-card" >
-                            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/houmon_t.png">
+                            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/tuusyo_t.png">
                             <h3>自宅に訪問してくれる<br>サービスを探したい</h3>
                         </div>
                     </a>
                     <a href="<?php echo esc_url( home_url() ); ?>/tuusyo">
                         <div class="top-card" >
-                            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/tuusyo_t.png">
+                            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/houmon_t.png">
                             <h3>自宅から通える<br>サービスを探したい</h3>
                         </div>
                     </a>
