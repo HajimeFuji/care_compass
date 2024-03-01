@@ -3,3 +3,4 @@
 Call Stack:
 #0 mixin mq style.scss on line 335
 02/27/24 11:45:56: style.scss - unclosed block: failed at `` C:\Users\HajimeFujii\Local Sites\carecompass\app\public\wp-content\themes\carecompass\assets\scss\style.scss on line 331, at column 0
+03/01/24 6:47:25: style.scss - unclosed block: failed at `` C:\Users\HajimeFujii\Local Sites\carecompass\app\public\wp-content\themes\carecompass\assets\scss\style.scss on line 474, at column 0
