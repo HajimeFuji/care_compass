@@ -32,7 +32,7 @@
     font-size: 24px;
 }
 
-// main
+/* main */
 .main {
     width: 100%;
     margin: 0 auto;
@@ -48,7 +48,7 @@
     margin: 0 auto;
     padding-bottom: 24px;
     @include mq(sp) {
-        padding: 0 20px;
+        padding: 0 16px;
     }
 }
 
@@ -102,6 +102,8 @@
         margin-bottom: 16px;
         margin-left: inherit;
         margin-right: inherit;
+        border-radius: 3px;
+        box-shadow: 0px 4px 8px 0px rgba(0,128,0, 0.96);
     }
     &__title {
         font-size: 24px;
@@ -120,7 +122,8 @@
     margin-top: 16px;
 }
 
-// 事業所一覧 archive-$slug.php
+
+/* 事業所一覧 archive-$slug.php */
 
 .office-card-wrap {
     display: flex;
@@ -147,6 +150,10 @@
     @include mq(sp) {
         width: 100%;
         margin-bottom: 16px;
+        margin-left: inherit;
+        margin-right: inherit;
+        border-radius: 3px;
+        box-shadow: 0px 4px 8px 0px rgba(0,128,0, 0.96);
     }
     &__title {
         text-align: left;
@@ -155,6 +162,9 @@
         font-family: "Noto serif JP";
         padding-left: 16px;
         line-height: 1.8;
+        @include mq(sp) {
+            padding-left: 4px;
+        }
     }
     &__txt {
         text-align: left;
@@ -164,10 +174,14 @@
         padding-left: 16px;
         margin-bottom: 12px;
         line-height: 1.8;
+        @include mq(sp) {
+            padding-left: 4px;
+        }
     }
 }
 
-// 事業所詳細 single-$slug.php
+ /* ---事業所詳細 single-$slug.php--- */
+
 .detail-wrap{
     max-width: 1100px;
     margin: 0 auto;
@@ -178,15 +192,25 @@
     display: flex;
     padding-top: 80px;
     column-gap: 34px;
+    @include mq(sp) {
+        display: block;
+        margin-top: 40px;
+        padding: 0 16px;
+    }
 }
 
 .detail-imgbox {
     width: 48%;
-    object-fit: cover;
+    @include mq(sp) {
+        width: 95%;
+        margin: 0 auto 20px;
+    }
     &_img {
         width: 100%;
         aspect-ratio: 1/1;
         height: auto;
+        object-fit: cover;
+        border-radius: 6px;
     }
 }
 
@@ -197,16 +221,29 @@
     width: 500px;
     row-gap: 32px;
     margin-bottom: 8px;
+    @include mq(sp) {
+        width: 100%;
+    }
     &__box {
         width: 100%;
         background-color: $white;
         padding: 10px;
         border-radius: 6px;
         box-shadow: 0px 5px 15px 0px rgba(0,128,0, 0.96);
+        @include mq(sp) {
+            width: 98%;
+            margin: 0 auto;
+            padding: inherit;
+            border-radius: 3px;
+            box-shadow: 0px 4px 8px 0px rgba(0,128,0, 0.96);
+        }
     }
     &__title {
         font-weight: 500;
         font-size: 20px;
+        @include mq(sp) {
+            font-size: 16px;
+        }
     }
     &__txt {
         font-family: 'Noto Sans JP';
@@ -234,7 +271,7 @@
     display: flex;
     flex-flow: column;
     max-width: 1100px;
-    width: 40%;
+    width: 42%;
     align-items: start;
     justify-content: center;
     border-radius: 6px;
@@ -246,6 +283,9 @@
     font-size: 20px;
     @include mq(sp) {
         width: 90%;
+        border-radius: 3px;
+        box-shadow: 0px 4px 8px 0px rgba(0,128,0, 0.96);
+        margin-bottom: 16px;
     }
     &__text {
         font-size: 24px;
@@ -306,6 +346,21 @@
     content: '';
 }
 
+/* ---Contact--- */
+
+.cta{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: $white;
+    color: $black;
+    text-align: center;
+    width: 100%;
+    height: 40px;
+    border: 1px solid #777777;
+    border-radius: 10px;
+}
+
 /* ---header--- */
 
 .header__pc {
@@ -324,6 +379,28 @@
     color: $black;
     font-weight: bold;
 }
+
+
+ /* ---drawer-nav--- */
+.drawer-nav {
+    background: #748baf;
+}
+
+.drawer-nav .menu-my_menu-container {
+    @include mq(sp) {
+        margin-bottom: 24px;
+        padding: 60px;
+        // background-color: #0062ff;
+    }
+}
+
+.drawer-nav .menu-my_menu-container li {
+    @include mq(sp) {
+        margin-bottom: 24px;
+        font-family: $sans;
+    }
+}
+
 
  /* ---footer--- */
 footer{

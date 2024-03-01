@@ -35,9 +35,17 @@
                         </div>
                     </a>
 
-                    <div class="search">
-                        <h4 class="search__text">事業所検索ボックス</h4>
-                        <?php get_search_form(); ?>
+                    <div class="search-contact"></div>
+                        <div class="search">
+                            <h4 class="search__text">事業所検索ボックス</h4>
+                            <?php get_search_form(); ?>
+                        </div>
+                        <div class="search">
+                            <h4 class="search__text">事業者の方へ</h4>
+                            <a href="<?php echo site_url('/contact') ?>" class="cta">
+                                <p>情報の追加・修正の依頼はこちら</p>
+                            </a>
+                        </div>
                     </div>
                 </div>
 
