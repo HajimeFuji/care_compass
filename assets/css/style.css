@@ -445,16 +445,20 @@ header li:hover {
   padding-top: 80px;
   column-gap: 34px;
 }
-.detail_img {
+.detail-imgbox {
   width: 48%;
-  aspect-ratio: 1;
   object-fit: cover;
+}
+.detail-imgbox_img {
+  width: 100%;
+  aspect-ratio: 1;
+  height: auto;
 }
 .detail-card {
   display: flex;
   flex-flow: column;
   justify-content: space-between;
-  width: 48%;
+  width: 500px;
   row-gap: 32px;
   margin-bottom: 8px;
 }
@@ -467,7 +471,7 @@ header li:hover {
 }
 .detail-card__title {
   font-weight: 500;
-  font-size: 24px;
+  font-size: 20px;
 }
 .detail-card__txt {
   font-family: "Noto Sans JP";
@@ -553,6 +557,64 @@ header a {
 header p {
   color: #404040;
   font-weight: bold;
+}
+/* ---header menu--- */
+.header-nav li {
+  position: relative;
+}
+.header-nav .sub-menu {
+  position: absolute;
+  top: 30px;
+  left: 0;
+  overflow: hidden;
+  width: 250px;
+  height: 0;
+  transition: 0.8s;
+  transform: translateY(-8%);
+  opacity: 0;
+}
+.header-nav li:hover .sub-menu {
+  height: auto;
+  transform: translateY(0);
+  opacity: 1;
+}
+.header-nav .sub-menu li {
+  display: block;
+  margin-left: 0;
+  padding: 0;
+  border-bottom: 1px solid #ddd;
+  background-color: rgba(255, 255, 255, 0.9);
+}
+.header-nav .menu-item-has-children:nth-last-child(1) .sub-menu, .header-nav .menu-item-has-children:nth-last-child(2) .sub-menu {
+  right: 0;
+  left: auto;
+}
+.header-nav .sub-menu li a {
+  padding: 1em;
+}
+/*スマホ用レイアウト*/
+@media (max-width: 820px) {
+  .header-nav li a {
+    text-align: left;
+  }
+  .header-nav .menu-item-has-children > a {
+    padding-bottom: 1em;
+  }
+  .header-nav .sub-menu li a {
+    position: relative;
+    padding: 1rem 1rem 1rem 2.75em;
+  }
+  .header-nav .sub-menu li a::before {
+    position: absolute;
+    top: 1.25em;
+    left: 1.75em;
+    display: block;
+    width: 0.5em;
+    height: 0.5em;
+    content: "";
+    border-bottom: 1px solid #fff;
+    border-left: 1px solid #fff;
+  }
 }
 /* ---footer--- */
 footer {

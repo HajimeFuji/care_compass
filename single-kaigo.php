@@ -17,11 +17,13 @@ Template Post Type: page, post
         <div class="main-flex">
             <section class="detail-wrap">
                 <div class="detail-card-wrap">
-                    <?php if (post_custom('kaigo_image')) : ?>
-                        <img src="<?php the_field('kaigo_image'); ?>" class="detail_img" alt="">
-                    <?php else : ?>
-                        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/no_img.jpg" class="detail_img" alt="no_image">
-                    <?php endif; ?>
+                    <div class="detail-imgbox">
+                        <?php if (post_custom('kaigo_image')) : ?>
+                            <img src="<?php the_field('kaigo_image'); ?>" class="detail-imgbox_img" alt="">
+                        <?php else : ?>
+                            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/no_img.jpg" class="detail-imgbox_img" alt="no_image">
+                        <?php endif; ?>
+                    </div>
 
                     <div class="detail-card" >
                         <div class="detail-card__box">
