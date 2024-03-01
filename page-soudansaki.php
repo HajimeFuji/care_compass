@@ -11,8 +11,7 @@
     <main class="main">
         <div class="main-flex">
             <section class="top-wrap">
-                <p><?php echo wpautop( get_the_content() ); ?></p>
-                <!-- <h2>包括支援センターはお住まいの地区ごとにあります</h2> -->
+                <h2><?php echo wpautop( get_the_content() ); ?></h2>
                 <div class="top-card-wrap">
                     <a href="<?php echo esc_url( home_url() ); ?>/houkatu">
                         <div class="top-card" >
