@@ -51,6 +51,9 @@ h3 {
   margin: 16px 0 24px;
   text-align: center;
 }
+h4 {
+  font-family: "Noto Serif JP";
+}
 p {
   text-align: left;
   font-family: "Noto Serif JP";
@@ -59,6 +62,9 @@ p {
   display: none;
 }
 @media screen and (max-width: 599px) {
+  h1 {
+    font-size: 20px;
+  }
   h2 {
     font-size: 18px;
   }
@@ -337,11 +343,28 @@ header li:hover {
     padding: 0 20px;
   }
 }
+.top-wrap-main {
+  display: flex;
+  flex-flow: column;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding-bottom: 24px;
+}
+@media screen and (max-width: 599px) {
+  .top-wrap-main {
+    padding: 0 20px;
+  }
+}
 .top-wrap p {
   text-align: center;
   font-size: 24px;
   margin-top: 16px;
   margin-bottom: 40px;
+}
+@media screen and (max-width: 599px) {
+  .top-wrap p {
+    font-size: 18px;
+  }
 }
 .top-card-wrap {
   display: flex;
@@ -373,6 +396,8 @@ header li:hover {
   .top-card {
     width: 100%;
     margin-bottom: 16px;
+    margin-left: inherit;
+    margin-right: inherit;
   }
 }
 .top-card__title {
@@ -496,14 +521,31 @@ header li:hover {
   display: flex;
   flex-flow: column;
   max-width: 1100px;
-  width: 60%;
+  width: 40%;
   align-items: start;
   justify-content: center;
+  border-radius: 6px;
+  box-shadow: 0px 5px 15px 0px rgba(0, 128, 0, 0.96);
   background-color: #ffffff;
   margin: 0 auto;
   padding: 4px 16px;
   margin-bottom: 40px;
   font-size: 20px;
+}
+@media screen and (max-width: 599px) {
+  .search {
+    width: 90%;
+  }
+}
+.search__text {
+  font-size: 24px;
+  margin: 16px 0;
+}
+@media screen and (max-width: 599px) {
+  .search__text {
+    font-size: 16px;
+    margin: 12px 0;
+  }
 }
 /* ---検索ボックス--- */
 .search-form {
@@ -524,6 +566,11 @@ header li:hover {
   box-sizing: border-box;
   font-size: 1em;
   outline: none;
+}
+@media screen and (max-width: 599px) {
+  .search-form input {
+    width: 200px;
+  }
 }
 .search-form input::placeholder {
   color: #777777;
@@ -546,75 +593,22 @@ header li:hover {
   content: "";
 }
 /* ---header--- */
-header {
+.header__pc {
   font-family: "Noto Serif JP";
   background-color: #fc9;
 }
-header a {
+@media screen and (max-width: 599px) {
+  .header__pc {
+    display: none;
+  }
+}
+.header__pc a {
   color: #404040;
   font-weight: bold;
 }
-header p {
+.header__pc p {
   color: #404040;
   font-weight: bold;
-}
-/* ---header menu--- */
-.header-nav li {
-  position: relative;
-}
-.header-nav .sub-menu {
-  position: absolute;
-  top: 30px;
-  left: 0;
-  overflow: hidden;
-  width: 250px;
-  height: 0;
-  transition: 0.8s;
-  transform: translateY(-8%);
-  opacity: 0;
-}
-.header-nav li:hover .sub-menu {
-  height: auto;
-  transform: translateY(0);
-  opacity: 1;
-}
-.header-nav .sub-menu li {
-  display: block;
-  margin-left: 0;
-  padding: 0;
-  border-bottom: 1px solid #ddd;
-  background-color: rgba(255, 255, 255, 0.9);
-}
-.header-nav .menu-item-has-children:nth-last-child(1) .sub-menu, .header-nav .menu-item-has-children:nth-last-child(2) .sub-menu {
-  right: 0;
-  left: auto;
-}
-.header-nav .sub-menu li a {
-  padding: 1em;
-}
-/*スマホ用レイアウト*/
-@media (max-width: 820px) {
-  .header-nav li a {
-    text-align: left;
-  }
-  .header-nav .menu-item-has-children > a {
-    padding-bottom: 1em;
-  }
-  .header-nav .sub-menu li a {
-    position: relative;
-    padding: 1rem 1rem 1rem 2.75em;
-  }
-  .header-nav .sub-menu li a::before {
-    position: absolute;
-    top: 1.25em;
-    left: 1.75em;
-    display: block;
-    width: 0.5em;
-    height: 0.5em;
-    content: "";
-    border-bottom: 1px solid #fff;
-    border-left: 1px solid #fff;
-  }
 }
 /* ---footer--- */
 footer {

@@ -13,7 +13,7 @@
 
     <main class="main">
         <div class="main-flex">
-            <section class="top-wrap">
+            <section class="top-wrap-main">
                 <h2>あなたのお困りごとは何ですか</h2>
                 <div class="top-card-wrap">
                     <a href="<?php echo esc_url( home_url() ); ?>/soudansaki">
@@ -34,13 +34,17 @@
                             <h3>自宅から通える<br>サービスを探したい</h3>
                         </div>
                     </a>
+
+                    <div class="search">
+                        <h4 class="search__text">事業所検索ボックス</h4>
+                        <?php get_search_form(); ?>
+                    </div>
                 </div>
+
+
             </section>
 
-            <div class="search">
-                <p>事業所検索ボックス</p>
-                <?php get_search_form(); ?>
-            </div>
+
         </div>
 
         <div class="returnbox">

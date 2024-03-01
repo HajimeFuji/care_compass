@@ -31,6 +31,11 @@ Template Post Type: page, post
                         </div>
                         <div class="detail-card__box">
                             <p class="detail-card__txt">住所：<?php the_field('kaigo_address'); ?></p>
+                            <?php if( get_field('kaigo_map') ): { ?>
+                                <a href="<?php the_field('kaigo_map'); ?>" target="_blank" rel="noopener norefferrer"><p class="detail-card__txt">地図はこちら</p></a>
+                            <?php } ?>
+                            <?php else: ?>
+                            <?php endif; ?>
                             <p class="detail-card__txt">電話：<?php the_field('kaigo_tel'); ?></p>
                             <?php if( get_field('kaigo_link') ): { ?>
                                 <a href="<?php the_field('kaigo_link'); ?>" target="_blank" rel="noopener norefferrer"><p class="detail-card__txt">公式サイトはこちら</p></a>
