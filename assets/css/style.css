@@ -307,6 +307,11 @@ header li:hover {
 #sec1-title {
   color: #404040;
 }
+@media screen and (max-width: 599px) {
+  #sec1-title {
+    padding-top: 40px;
+  }
+}
 #sec1-title h1 {
   padding: 60px 0 0 0;
   margin: 0 auto;
@@ -399,7 +404,7 @@ header li:hover {
     margin-bottom: 16px;
     margin-left: inherit;
     margin-right: inherit;
-    border-radius: 3px;
+    border-radius: 4px;
     box-shadow: 0px 4px 8px 0px rgba(0, 128, 0, 0.96);
   }
 }
@@ -447,7 +452,7 @@ header li:hover {
     margin-bottom: 16px;
     margin-left: inherit;
     margin-right: inherit;
-    border-radius: 3px;
+    border-radius: 4px;
     box-shadow: 0px 4px 8px 0px rgba(0, 128, 0, 0.96);
   }
 }
@@ -456,12 +461,14 @@ header li:hover {
   font-size: 18px;
   font-weight: bold;
   font-family: "Noto serif JP";
-  padding-left: 16px;
+  padding-left: 12px;
+  padding-right: 8px;
   line-height: 1.8;
 }
 @media screen and (max-width: 599px) {
   .office-card__title {
-    padding-left: 4px;
+    padding-left: 8px;
+    padding-right: 4px;
   }
 }
 .office-card__txt {
@@ -469,13 +476,15 @@ header li:hover {
   font-size: 14px;
   font-weight: bold;
   font-family: "Noto serif JP";
-  padding-left: 16px;
+  padding-left: 12px;
+  padding-right: 8px;
   margin-bottom: 12px;
   line-height: 1.8;
 }
 @media screen and (max-width: 599px) {
   .office-card__txt {
-    padding-left: 4px;
+    padding-left: 8px;
+    padding-right: 4px;
   }
 }
 /* ---事業所詳細 single-$slug.php--- */
@@ -501,7 +510,7 @@ header li:hover {
 }
 @media screen and (max-width: 599px) {
   .detail-imgbox {
-    width: 95%;
+    width: 98%;
     margin: 0 auto 20px;
   }
 }
@@ -536,8 +545,8 @@ header li:hover {
   .detail-card__box {
     width: 98%;
     margin: 0 auto;
-    padding: inherit;
-    border-radius: 3px;
+    padding: 4px;
+    border-radius: 4px;
     box-shadow: 0px 4px 8px 0px rgba(0, 128, 0, 0.96);
   }
 }
@@ -573,7 +582,7 @@ header li:hover {
   display: flex;
   flex-flow: column;
   max-width: 1100px;
-  width: 42%;
+  width: 43.5%;
   align-items: start;
   justify-content: center;
   border-radius: 6px;
@@ -587,7 +596,7 @@ header li:hover {
 @media screen and (max-width: 599px) {
   .search {
     width: 90%;
-    border-radius: 3px;
+    border-radius: 4px;
     box-shadow: 0px 4px 8px 0px rgba(0, 128, 0, 0.96);
     margin-bottom: 16px;
   }
