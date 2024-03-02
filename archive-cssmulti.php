@@ -22,7 +22,7 @@ Template Post Type: page, post
                             $args = [
                                 'post_type' => 'kaigo', //カスタム投稿タイプ名
                                 'posts_per_page' => -1, //取得する投稿の件数
-                                'category_name' => 'houmon',
+                                'category_name' => 'tuusyo',
                                 'tag' => 'cssmulti',
                                 'orderby'   => 'title',
                             ];

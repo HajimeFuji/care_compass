@@ -34,13 +34,13 @@
                     <a href="<?php echo esc_url( home_url() ); ?>/ssmulti">
                         <div class="top-card" >
                             <h3 class="top-card__title">小規模多機能</h3>
-                            <p>通い中心で状況により訪問や<br>お泊まりを頼みたい方はこちら</p>
+                            <p>通い中心で状況により訪問<br>や宿泊を頼みたい方はこちら</p>
                         </div>
                     </a>
                     <a href="<?php echo esc_url( home_url() ); ?>/cssmulti">
                         <div class="top-card" >
                             <h3 class="top-card__title">看護小規模多機能</h3>
-                            <p>通い中心で状況により訪問看護や<br>お泊まりを頼みたい方はこちら</p>
+                            <p>通い中心で状況により訪問看護<br>や宿泊を頼みたい方はこちら</p>
                         </div>
                     </a>
 
