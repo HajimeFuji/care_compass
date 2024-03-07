@@ -119,76 +119,56 @@ add_action('pre_get_posts', 'sortpost');
 
 
 // カスタムフィールドを検索条件に含む
-
-// function custom_search($search, $wp_query) {
-//     global $wpdb;
-//     if (!$wp_query->is_search)
-//     return $search;
-//     if (!isset($wp_query->query_vars))
-//     return $search;
-//     $search_words = explode(' ', isset($wp_query->query_vars['s']) ? $wp_query->query_vars['s'] : '');
-//     if ( count($search_words) > 0 ) {
-//     $search = '';
-//     $search .= "AND post_type = 'page', 'post'";
-//     foreach ( $search_words as $word ) {
-//         if ( !empty($word) ) {
-//                 $search_word = '%' . esc_sql( $word ) . '%';
-//                 $search .= " AND (
-//                     {$wpdb->posts}.page_title LIKE '{$search_word}'
-//                     OR {$wpdb->posts}.page_content LIKE '{$search_word}'
-//                     OR {$wpdb->posts}.ID IN (
-//                         SELECT distinct post_id
-//                         FROM {$wpdb->postmeta}
-//                         WHERE meta_value LIKE '{$search_word}'
-//                     )
-//                 ) ";
-//             }
-//         }
-//     }
-//     return $search;
-// }
-// add_filter('posts_search','custom_search', 10, 2);
-
-
-// キーワードがなくても検索ページを表示させる
-
-function custom_search($search, $wp_query  ) {
-    //query['s']があったら検索ページ表示
-    if ( isset($wp_query->query['s']) ) 
-    $wp_query->is_search = true;
-    return $search;
-}
-add_filter('posts_search','custom_search', 10, 2);
-
-
-// 検索フォームごとに search.php を変える
-add_action('template_include', 'my_search_template');
-function my_search_template($template)
+function custom_field_search($search, $wp_query) 
 {
-    $type = filter_input(INPUT_GET, 'search_type');
-    $new_template = '';
-    if ($type) {
-        switch ($type) {
-            case 'all':
-                $new_template = STYLESHEETPATH . '/search-all.php';
-                break;
-            case 'soudan':
-                $new_template = STYLESHEETPATH . '/search-soudan.php';
-                break;
-            case 'houmon':
-                $new_template = STYLESHEETPATH . '/search-houmon.php';
-                break;
-            case 'tuusyo':
-                $new_template = STYLESHEETPATH . '/search-tuusyo.php';
-                break;
-            default:
-                $new_template = '';
-        }
-    }
-    if ($new_template) {
-        if (file_exists($new_template)) {
-            return $new_template;
-        }
-    }
-    return $template;
+	// キーワードがなくても検索ページを表示させる
+	// if ( isset($wp_query->query['s']) )
+	// 	$wp_query->is_search = TRUE;
+
+    global $wpdb;
+    if (!$wp_query->is_search)
+    return $search;
+
+	// 検索ページ以外はカスタマイズしない
+	if ( !$wp_query->is_search )
+		return;
+
+	// 完全一致検索（nunmerかcodeが入力されたら検索）
+	// foreach ( ['number', 'item_code'] as $_key )
+	// {
+	// 	if ( !empty($_REQUEST[$_key]) ) 
+	// 	{
+	// 		$search .= " AND wp_postmeta.meta_key = '$_key'";
+	// 		$search .= " AND wp_postmeta.meta_value = '$_REQUEST[$_key]'";
+	// 	}
+	// }
+
+	// 部分一致検索（item_nameが入力されたら検索）
+	foreach ( ['soudan_area'] as $_key )
+	{
+		if ( !empty($_REQUEST[$_key]) ) 
+		{
+			$search .= " AND wp_postmeta.meta_key = '$_key'";
+			$search .= " AND wp_postmeta.meta_value LIKE '%$_REQUEST[$_key]%'";
+		}
+	}
+
+	return $search;
 }
+add_filter('posts_search','custom_field_search', 10, 2);
+
+// フォームからカスタムフィールドが渡された場合、joinに wp_postmeta を追加
+function custom_search_join($join)
+{
+	foreach ( ['soudan_area'] as $_key )
+	{
+		if ( !empty($_REQUEST[$_key]) )
+		{
+			$join .= 'INNER JOIN wp_postmeta ON (wp_posts.ID = wp_postmeta.post_id)';
+			break;
+		}
+	}
+
+	return $join;
+}
+add_filter('posts_join', 'custom_search_join');

@@ -17,9 +17,11 @@ Template Post Type: page, post
                         <?php while(have_posts()) : the_post();?>
                         <a href="<?php the_permalink(); ?>">
                             <div class="office-card">
-                                <h2 class="office-card__title"><?php the_title(); ?></h2>
+                            <h2 class="office-card__title"><?php the_title(); ?></h2>
                                 <h4 class="office-card__txt">カテゴリー：<?php the_category(" , "); ?></h4>
                                 <h4 class="office-card__txt">分類：<?php the_tags("  "); ?></h4>
+                                <h4 class="office-card__txt">地域：<?php the_field('office_area'); ?></h4>
+                                <!-- <h4 class="office-card__txt"><?php the_field('kaigo_sougei'); ?>/<?php the_field('kaigo_bath'); ?></h4> -->
                             </div>
                         </a>
                     <?php endwhile; ?><?php else: ?>
