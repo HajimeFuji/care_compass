@@ -46,6 +46,9 @@ Template Post Type: page, post
                     <?php endif; ?>
                     <?php wp_reset_postdata(); ?>
 
+                </div>
+            </div>
+
                     <div class="returnbox">
                         <a class="btn2__text" href="#">
                             <div class="btn2">
@@ -53,8 +56,7 @@ Template Post Type: page, post
                             </div>
                         </a>
                     </div>
-                </div>
-            </div>
+
 
             <div class="original-sidebar">
                 <div>
