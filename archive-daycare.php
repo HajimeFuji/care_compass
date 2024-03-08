@@ -36,8 +36,8 @@ Template Post Type: page, post
                         <a href="<?php the_permalink(); ?>">
                             <div class="office-card" >
                                 <h2 class="office-card__title"><?php the_title(); ?></h2>
-                                <h4 class="office-card__txt">住所：<?php the_field('soudan_address'); ?></h4>
-                                <h4 class="office-card__txt">電話：<?php the_field('soudan_tel'); ?></h4>
+                                <h4 class="office-card__txt">住所：<?php the_field('kaigo_address'); ?></h4>
+                                <h4 class="office-card__txt">電話：<?php the_field('kaigo_tel'); ?></h4>
                             </div>
                         </a>
 
