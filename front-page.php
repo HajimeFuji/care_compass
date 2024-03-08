@@ -51,7 +51,7 @@
                             </a>
                         </div>
                     </div>
-
+                </div>
                     <div class="returnbox">
                         <a class="btn2__text" href="#">
                             <div class="btn2">
@@ -59,7 +59,7 @@
                             </div>
                         </a>
                     </div>
-                </div>
+                <!-- </div> -->
 
                 <div class="original-sidebar">
                     <div>
