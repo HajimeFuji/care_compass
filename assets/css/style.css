@@ -32,7 +32,7 @@ img {
 }
 /* --------------------------------------------------- */
 body {
-  font-family: "Noto Serif JP", "Noto Sans JP", serif, sans-serif;
+  font-family: "Yu Gothic", 游ゴシック, YuGothic, "Noto Sans JP", "Hiragino Gothic ProN", "ヒラギノ角ゴ Pro W3", sans-serif;
   color: #3b4043;
 }
 h1 {
@@ -243,6 +243,26 @@ header li:hover {
     line-height: 1;
   }
 }
+/* ---Contact--- */
+.cta {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #ffffff;
+  color: #404040;
+  text-align: center;
+  width: 90%;
+  height: 40px;
+  border: 1px solid #777777;
+  border-radius: 10px;
+}
+.search .cta p {
+  text-align: center;
+  padding: 5px 15px;
+  margin: initial;
+  font-size: 1em;
+  height: 32px;
+}
 .original-sidebar {
   width: 136px;
   background-color: #f2dbdb;
@@ -298,6 +318,119 @@ header li:hover {
   width: 24px;
   height: 13.5px;
 }
+/* ---トップページ検索ボックス--- */
+.search-form {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  overflow: hidden;
+  width: 100%;
+  height: 40px;
+  border: 1px solid #777777;
+  border-radius: 10px;
+}
+.search-form input {
+  width: 90%;
+  height: 32px;
+  text-align: center;
+  padding: 5px 15px;
+  border: none;
+  box-sizing: border-box;
+  font-size: 1em;
+  outline: none;
+}
+@media screen and (max-width: 599px) {
+  .search-form input {
+    width: 200px;
+  }
+}
+.search-form input::placeholder {
+  color: #777777;
+}
+.search-form button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50px;
+  height: 45px;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+}
+.search-form button::after {
+  width: 24px;
+  height: 24px;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M18.031 16.6168L22.3137 20.8995L20.8995 22.3137L16.6168 18.031C15.0769 19.263 13.124 20 11 20C6.032 20 2 15.968 2 11C2 6.032 6.032 2 11 2C15.968 2 20 6.032 20 11C20 13.124 19.263 15.0769 18.031 16.6168ZM16.0247 15.8748C17.2475 14.6146 18 12.8956 18 11C18 7.1325 14.8675 4 11 4C7.1325 4 4 7.1325 4 11C4 14.8675 7.1325 18 11 18C12.8956 18 14.6146 17.2475 15.8748 16.0247L16.0247 15.8748Z' fill='%23777777'%3E%3C/path%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  content: "";
+}
+/* ---サイドバー条件絞り込みボックス--- */
+.searchform {
+  line-height: 1;
+  position: relative;
+  margin: 2em 0;
+}
+.searchfield {
+  box-sizing: border-box;
+  width: 100%;
+  padding: 0.75em;
+  border: 1px solid #bbb;
+  border-radius: 4px;
+  background-color: #efefef;
+  margin-bottom: 20px;
+}
+.searchsubmit {
+  width: 50px;
+  height: 40px;
+  margin: 0 0 0 auto;
+  display: flex;
+  justify-content: center;
+  border: 1px solid #bbb;
+  border-radius: 4px;
+  background-color: transparent;
+  color: #404040;
+  font-weight: bold;
+  font-size: 16px;
+  text-align: center;
+  cursor: pointer;
+}
+.searchsubmit:hover {
+  background: #eee;
+}
+.search-submit {
+  box-sizing: border-box;
+  padding: 0.75em;
+  border: 1px solid #bbb;
+  border-radius: 4px;
+  background-color: transparent;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  width: 50px;
+  height: 40px;
+  margin: 0 0 0 auto;
+}
+.search-submit button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50px;
+  height: 45px;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+}
+.search-submit:hover {
+  background: #eee;
+}
+.search-submit button::after {
+  width: 32px;
+  height: 32px;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M18.031 16.6168L22.3137 20.8995L20.8995 22.3137L16.6168 18.031C15.0769 19.263 13.124 20 11 20C6.032 20 2 15.968 2 11C2 6.032 6.032 2 11 2C15.968 2 20 6.032 20 11C20 13.124 19.263 15.0769 18.031 16.6168ZM16.0247 15.8748C17.2475 14.6146 18 12.8956 18 11C18 7.1325 14.8675 4 11 4C7.1325 4 4 7.1325 4 11C4 14.8675 7.1325 18 11 18C12.8956 18 14.6146 17.2475 15.8748 16.0247L16.0247 15.8748Z' fill='%23777777'%3E%3C/path%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  content: "";
+}
 .article {
   background: rgba(121, 179, 246, 0.46);
   width: 100vw;
@@ -337,7 +470,7 @@ header li:hover {
 }
 .main-flex {
   display: flex;
-  flex-flow: column;
+  flex-direction: row-reverse;
 }
 .top-wrap {
   max-width: 1100px;
@@ -350,11 +483,7 @@ header li:hover {
   }
 }
 .top-wrap-main {
-  display: flex;
-  flex-flow: column;
-  max-width: 1100px;
-  margin: 0 auto;
-  padding-bottom: 24px;
+  width: calc(100% - 200px);
 }
 @media screen and (max-width: 599px) {
   .top-wrap-main {
@@ -372,10 +501,22 @@ header li:hover {
     font-size: 18px;
   }
 }
+.top-wrap-main p {
+  text-align: center;
+  font-size: 24px;
+  margin-top: 16px;
+  margin-bottom: 40px;
+}
+@media screen and (max-width: 599px) {
+  .top-wrap-main p {
+    font-size: 18px;
+  }
+}
 .top-card-wrap {
   display: flex;
   flex-wrap: wrap;
   max-width: 1100px;
+  margin: 0 auto;
 }
 @media screen and (max-width: 599px) {
   .top-card-wrap {
@@ -423,9 +564,10 @@ header li:hover {
 }
 /* 事業所一覧 archive-$slug.php */
 .office-card-wrap {
+  max-width: 1100px;
   display: flex;
   flex-wrap: wrap;
-  max-width: 1100px;
+  margin: 0 auto;
 }
 @media screen and (max-width: 599px) {
   .office-card-wrap {
@@ -611,64 +753,6 @@ header li:hover {
     margin: 12px 0;
   }
 }
-/* ---検索ボックス--- */
-.search-form {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  overflow: hidden;
-  width: 100%;
-  height: 40px;
-  border: 1px solid #777777;
-  border-radius: 10px;
-}
-.search-form input {
-  width: 250px;
-  height: 32px;
-  padding: 5px 15px;
-  border: none;
-  box-sizing: border-box;
-  font-size: 1em;
-  outline: none;
-}
-@media screen and (max-width: 599px) {
-  .search-form input {
-    width: 200px;
-  }
-}
-.search-form input::placeholder {
-  color: #777777;
-}
-.search-form button {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 50px;
-  height: 45px;
-  border: none;
-  background-color: transparent;
-  cursor: pointer;
-}
-.search-form button::after {
-  width: 24px;
-  height: 24px;
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M18.031 16.6168L22.3137 20.8995L20.8995 22.3137L16.6168 18.031C15.0769 19.263 13.124 20 11 20C6.032 20 2 15.968 2 11C2 6.032 6.032 2 11 2C15.968 2 20 6.032 20 11C20 13.124 19.263 15.0769 18.031 16.6168ZM16.0247 15.8748C17.2475 14.6146 18 12.8956 18 11C18 7.1325 14.8675 4 11 4C7.1325 4 4 7.1325 4 11C4 14.8675 7.1325 18 11 18C12.8956 18 14.6146 17.2475 15.8748 16.0247L16.0247 15.8748Z' fill='%23777777'%3E%3C/path%3E%3C/svg%3E");
-  background-repeat: no-repeat;
-  content: "";
-}
-/* ---Contact--- */
-.cta {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: #ffffff;
-  color: #404040;
-  text-align: center;
-  width: 100%;
-  height: 40px;
-  border: 1px solid #777777;
-  border-radius: 10px;
-}
 /* ---header--- */
 .header__pc {
   font-family: "Noto Serif JP";
@@ -721,74 +805,8 @@ footer .copyright {
   right: 20px;
   bottom: 50px;
 }
-.outdoors-content {
-  display: flex;
-  width: 90%;
-  justify-content: space-around;
-  flex-wrap: wrap;
-  column-gap: 16px;
-  row-gap: 24px;
-  margin: 0 auto;
-}
-@media screen and (max-width: 599px) {
-  .outdoors-content {
-    width: 100%;
-  }
-}
-.outdoors-card {
-  width: 300px;
-  background-color: #f3f3f3;
-  border-radius: 6px;
-  box-shadow: 0px 3px 6px 0px rgba(0, 0, 0, 0.16);
-  padding: 8px;
-}
-@media screen and (max-width: 599px) {
-  .outdoors-card {
-    width: 90vw;
-  }
-}
-.outdoors-card__img {
-  width: 100%;
-  margin-bottom: 12px;
-}
-.outdoors-card__txt {
-  font-size: 16px;
-  text-align: start;
-}
-.outdoors-single {
-  width: 600px;
-  background-color: #f3f3f3;
-  border-radius: 6px;
-  box-shadow: 0px 3px 6px 0px rgba(0, 0, 0, 0.16);
-  margin-top: 40px;
-  padding: 16px;
-}
-@media screen and (max-width: 599px) {
-  .outdoors-single {
-    width: 90%;
-  }
-}
-.outdoors-single__img {
-  width: 100%;
-  margin-bottom: 20px;
-}
-.outdoors-single__txt {
-  font-size: 14px;
-  font-weight: bold;
-  text-align: start;
-}
 .blogpost-form-wrap {
   margin: 0 auto;
   padding-top: 80px;
-}
-.thumb {
-  text-align: center;
-}
-.thumb img {
-  width: auto;
-  height: auto;
-  max-width: 100%;
-  max-height: 100%;
-  margin-bottom: 20px;
 }
 /*# sourceMappingURL=style.css.map */

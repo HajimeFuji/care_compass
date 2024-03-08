@@ -9,14 +9,16 @@ Template Post Type: page, post
 
 
 <article class="article">
-    <section id="sec1-title">
-        <h1><?php the_title(); ?></h1>
-    </section>
-    
+
     <main class="main">
         <div class="main-flex">
-            <section class="top-wrap">
+            <div class="top-wrap-main">
+                <section id="sec1-title">
+                    <h1><?php the_title(); ?></h1>
+                </section>
+    
                 <p><?php the_content(); ?></p>
+
                 <div class="office-card-wrap">
                     <?php
                         $args = [
@@ -33,9 +35,9 @@ Template Post Type: page, post
                         <?php while ($my_query -> have_posts()) : $my_query -> the_post(); ?>
                         <a href="<?php the_permalink(); ?>">
                             <div class="office-card" >
-                                <h2 class="office-card__title"><?php the_title(); ?></h2 >
-                                <h4  class="office-card__txt">住所：<?php the_field('kaigo_address'); ?></h4 >
-                                <h4  class="office-card__txt">電話：<?php the_field('kaigo_tel'); ?></h4 >
+                                <h2 class="office-card__title"><?php the_title(); ?></h2>
+                                <h4 class="office-card__txt">住所：<?php the_field('soudan_address'); ?></h4>
+                                <h4 class="office-card__txt">電話：<?php the_field('soudan_tel'); ?></h4>
                             </div>
                         </a>
 
@@ -43,18 +45,25 @@ Template Post Type: page, post
                         <?php echo "表示する記事がありません"; ?>
                     <?php endif; ?>
                     <?php wp_reset_postdata(); ?>
-                </div>
-            </section>
-        </div>
 
-        <div class="returnbox">
-            <a class="btn2__text" href="#">
-                <div class="btn2">
-                    <p class="btn2__text">page top</p>
+                    <div class="returnbox">
+                        <a class="btn2__text" href="#">
+                            <div class="btn2">
+                                <p class="btn2__text">page top</p>
+                            </div>
+                        </a>
+                    </div>
                 </div>
-            </a>
+            </div>
+
+            <div class="original-sidebar">
+                <div>
+                    <?php get_sidebar('kango'); ?>
+                </div>
+            </div>
+
+
         </div>
-        
     </main>
 
 </article>

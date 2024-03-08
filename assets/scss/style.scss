@@ -37,12 +37,14 @@
 /* main */
 .main {
     width: 100%;
+    // display: flex;
+    // flex-flow: column;
     margin: 0 auto;
 }
 
 .main-flex {
     display: flex;
-    flex-flow: column;
+    flex-direction: row-reverse;
 }
 
 .top-wrap {
@@ -55,17 +57,26 @@
 }
 
 .top-wrap-main{
-    display: flex;
-    flex-flow: column;
-    max-width: 1100px;
-    margin: 0 auto;
-    padding-bottom: 24px;
+    // display: flex;
+    width: calc(100% - 200px);
+    // flex-flow: column;
+    // max-width: 1100px;
+    // margin: 0 auto;
+    // padding-bottom: 24px;
     @include mq(sp) {
         padding: 0 20px;
     }
 }
-
 .top-wrap p {
+    text-align: center;
+    font-size: 24px;
+    margin-top: 16px;
+    margin-bottom: 40px;
+    @include mq(sp) {
+        font-size: 18px;
+    }
+}
+.top-wrap-main p {
     text-align: center;
     font-size: 24px;
     margin-top: 16px;
@@ -79,6 +90,7 @@
     display: flex;
     flex-wrap: wrap;
     max-width: 1100px;
+    margin: 0 auto;
     @include mq(sp) {
         display: block;
         width: 100%;
@@ -128,9 +140,10 @@
 /* 事業所一覧 archive-$slug.php */
 
 .office-card-wrap {
+    max-width: 1100px;
     display: flex;
     flex-wrap: wrap;
-    max-width: 1100px;
+    margin: 0 auto;
     @include mq(sp) {
         display: block;
         width: 100%;
@@ -303,70 +316,6 @@
     }
 }
 
- /* ---検索ボックス--- */
-
-.search-form {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    overflow: hidden;
-    width: 100%;
-    height: 40px;
-    border: 1px solid #777777;
-    border-radius: 10px;
-}
-
-.search-form input {
-    width: 250px;
-    height: 32px;
-    padding: 5px 15px;
-    border: none;
-    box-sizing: border-box;
-    font-size: 1em;
-    outline: none;
-    @include mq(sp) {
-        width: 200px;
-    }
-}
-
-.search-form input::placeholder{
-    color: #777777;
-}
-
-.search-form button {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 50px;
-    height: 45px;
-    border: none;
-    background-color: transparent;
-    cursor: pointer;
-}
-
-.search-form button::after {
-    width: 24px;
-    height: 24px;
-    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M18.031 16.6168L22.3137 20.8995L20.8995 22.3137L16.6168 18.031C15.0769 19.263 13.124 20 11 20C6.032 20 2 15.968 2 11C2 6.032 6.032 2 11 2C15.968 2 20 6.032 20 11C20 13.124 19.263 15.0769 18.031 16.6168ZM16.0247 15.8748C17.2475 14.6146 18 12.8956 18 11C18 7.1325 14.8675 4 11 4C7.1325 4 4 7.1325 4 11C4 14.8675 7.1325 18 11 18C12.8956 18 14.6146 17.2475 15.8748 16.0247L16.0247 15.8748Z' fill='%23777777'%3E%3C/path%3E%3C/svg%3E");
-    background-repeat: no-repeat;
-    content: '';
-}
-
-/* ---Contact--- */
-
-.cta{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: $white;
-    color: $black;
-    text-align: center;
-    width: 100%;
-    height: 40px;
-    border: 1px solid #777777;
-    border-radius: 10px;
-}
-
 /* ---header--- */
 
 .header__pc {
@@ -429,77 +378,8 @@ footer .copyright{
     bottom: 50px;
 }
 
-// archive-outdoors
-.outdoors-content {
-    display: flex;
-    width: 90%;
-    justify-content: space-around;
-    flex-wrap: wrap;
-    column-gap: 16px;
-    row-gap: 24px;
-    margin: 0 auto;
-    @include mq(sp) {
-        width: 100%;
-    }
-}
-.outdoors-card {
-    width: 300px;
-    background-color: #f3f3f3;
-    border-radius: 6px;
-    box-shadow: 0px 3px 6px 0px rgba(0, 0, 0, 0.16);
-    padding: 8px;
-    @include mq(sp) {
-        width: 90vw;
-    }
-    &__img {
-        width: 100%;
-        margin-bottom: 12px;
-    }
-    &__txt {
-        font-size: 16px;
-        text-align: start;
-    }
-}
-
-// single-outdoors.php
-.outdoors-single {
-    width: 600px;
-    // aspect-ratio: 1;
-    background-color: #f3f3f3;
-    border-radius: 6px;
-    box-shadow: 0px 3px 6px 0px rgba(0, 0, 0, 0.16);
-    margin-top: 40px;
-    padding: 16px;
-    @include mq(sp) {
-        width: 90%;
-    }
-    &__img {
-        width: 100%;
-        margin-bottom: 20px;
-    }
-    &__txt {
-        font-size: 14px;
-        font-weight: bold;
-        text-align: start;
-    }
-}
-
-
 // 新規投稿
 .blogpost-form-wrap {
     margin: 0 auto;
     padding-top: 80px;
-}
-
-// single.php表示
-
-.thumb{
-    text-align:center;
-}
-.thumb img{
-    width:auto;
-    height:auto;
-    max-width:100%;
-    max-height:100%;
-    margin-bottom: 20px;
 }
