@@ -17,7 +17,40 @@ Template Post Type: page, post
                     <h1><?php the_title(); ?></h1>
                 </section>
     
-                <p><?php the_content(); ?></p>
+                <?php the_content(); ?>
+
+        <div class="pc-none">
+            <h2 class="side__headline">絞り込み</h2>
+
+            <form action="<?php echo esc_url(home_url('/')); ?>" method="get" id="" class="searchform">
+                <input type="hidden" name="search_type" value="tuusyo">
+                <input name="catnum" type="hidden" value="3" />
+                <input name="post_tag" type="hidden" value="cssmulti" />
+                <input type="text" name="s" id="s" class="searchfield" placeholder="キーワード検索" />
+                
+                <select name="office_area" class="searchfield" >
+                    <option value="" selected>地域名</option>
+                    <option value="大麻">大麻</option>
+                    <option value="野幌">野幌</option>
+                    <option value="江別">江別</option>
+                    <option value="その他">その他</option>
+                </select>
+                
+                <select name="kaigo_sougei" class="searchfield" >
+                    <option value="" selected>送迎なし</option>
+                    <option value="送迎可能">送迎可能</option>
+                </select>
+
+                <select name="kaigo_bath" class="searchfield" >
+                    <option value="" selected>入浴なし</option>
+                    <option value="入浴可能">入浴可能</option>
+                </select>
+
+                <div class="search-submit">
+                    <button type="submit" value="検索"></button>
+                </div>
+            </form>
+        </div>
 
                 <div class="office-card-wrap">
                     <?php
@@ -41,10 +74,12 @@ Template Post Type: page, post
                             </div>
                         </a>
 
-                    <?php endwhile; ?><?php else : ?>
+                    <?php endwhile; ?>
+                    <?php wp_reset_postdata(); ?>
+                    <?php else : ?>
                         <?php echo "表示する記事がありません"; ?>
                     <?php endif; ?>
-                    <?php wp_reset_postdata(); ?>
+
 
                 </div>
             </div>
