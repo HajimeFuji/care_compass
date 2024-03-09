@@ -6,27 +6,8 @@
         <form action="<?php echo esc_url(home_url('/')); ?>" method="get" id="" class="searchform">
             <input type="hidden" name="search_type" value="tuusyo">
             <input name="catnum" type="hidden" value="3" />
-            <input name="post_tag" type="hidden" value="daycare" />
-            <input type="text" name="s" id="s" class="ssmulti" placeholder="キーワード検索" />
-            
-            <!-- <select name="catnum" class="searchfield">
-                <option value="" selected>カテゴリー</option>
-                <?php
-                    $categories = get_categories();
-                    foreach($categories as $category) :
-                ?>
-                    <option value="<?php echo $category->term_id; ?>"><?php echo $category->cat_name; ?></option>
-                <?php endforeach; ?>
-            </select>
-
-            <select name='post_tag' id='tag'  class="searchfield">
-                <?php $tags = get_tags(); if ( $tags ) : ?>
-                <option value="" selected="selected">タグ選択</option>
-                <?php foreach ( $tags as $tag ): ?>
-                <option value="<?php echo esc_html( $tag->slug);  ?>"><?php echo esc_html( $tag->name ); ?></option>
-                <?php endforeach; ?>
-                <?php endif; ?>
-            </select> -->
+            <input name="post_tag" type="hidden" value="ssmulti" />
+            <input type="text" name="s" id="s" class="searchfield" placeholder="キーワード検索" />
             
             <select name="office_area" class="searchfield" >
                 <option value="" selected>地域名</option>
