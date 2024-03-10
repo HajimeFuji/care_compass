@@ -19,29 +19,49 @@ Template Post Type: page, post
     
                 <?php the_content(); ?>
 
-        <div class="pc-none">
-            <h2 class="side__headline">絞り込み</h2>
+                <div class="pc-none">
+                    <h2 class="side__headline">絞り込み</h2>
 
-            <form action="<?php echo esc_url(home_url('/')); ?>" method="get" id="" class="searchform">
-                <input type="hidden" name="search_type" value="soudan">
-                <input name="catnum" type="hidden" value="14" />
-                <input type="text" name="s" id="s" class="searchfield" placeholder="キーワード検索" />
-                
-                <select name="office_area" class="searchfield" >
-                    <option value="" selected>地域名</option>
-                    <option value="大麻">大麻</option>
-                    <option value="野幌">野幌</option>
-                    <option value="江別">江別</option>
-                    <option value="その他">その他</option>
-                </select>
+                    <form action="<?php echo esc_url(home_url('/')); ?>" method="get" id="" class="searchform">
+                        <input type="hidden" name="search_type" value="soudan">
+                        <input name="catnum" type="hidden" value="14" />
+                        <input type="text" name="s" id="s" class="searchfield" placeholder="キーワード検索" />
+                        
+                        <select name="office_area" class="searchfield" >
+                            <option value="" selected>地域名</option>
+                            <option value="大麻">大麻</option>
+                            <option value="野幌">野幌</option>
+                            <option value="江別">江別</option>
+                            <option value="その他">その他</option>
+                        </select>
 
-                <div class="search-submit">
-                    <button type="submit" value="検索"></button>
+                        <div class="search-submit">
+                            <button type="submit" value="検索"></button>
+                        </div>
+                    </form>
                 </div>
-            </form>
-        </div>
 
                 <div class="office-card-wrap">
+                    <!-- <div class="pc-none">
+                        <h2 class="side__headline">絞り込みdesu</h2>
+                        <form action="<?php echo esc_url(home_url('/')); ?>" method="get" id="" class="searchform">
+                            <input type="hidden" name="search_type" value="soudan">
+                            <input name="catnum" type="hidden" value="14" />
+                            <input type="text" name="s" id="s" class="searchfield" placeholder="キーワード検索" />
+                            
+                            <select name="office_area" class="searchfield" >
+                                <option value="" selected>地域名</option>
+                                <option value="大麻">大麻</option>
+                                <option value="野幌">野幌</option>
+                                <option value="江別">江別</option>
+                                <option value="その他">その他</option>
+                            </select>
+
+                            <div class="search-submit">
+                                <button type="submit" value="検索"></button>
+                            </div>
+                        </form>
+                    </div> -->
                     <?php
                         $args = [
                             'post_type' => 'madoguti', //カスタム投稿タイプ名

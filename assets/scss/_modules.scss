@@ -334,8 +334,10 @@ header li:hover{
     border-radius: 4px;
     background-color: #efefef;
     margin-bottom: 20px;
+    font-size: 14px;
     @include mq(sp) {
         margin-bottom: 8px;
+        height: 36px;
     }
 }
 
@@ -377,8 +379,8 @@ header li:hover{
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 50px;
-    height: 45px;
+    // width: 50px;
+    // height: 45px;
     border: none;
     background-color: transparent;
     cursor: pointer;
