@@ -337,25 +337,6 @@
 }
 
 
- /* ---drawer-nav--- */
-.drawer-nav {
-    background: #748baf;
-}
-
-.drawer-nav .menu-my_menu-container {
-    @include mq(sp) {
-        margin-bottom: 24px;
-        padding: 60px;
-        // background-color: #0062ff;
-    }
-}
-
-.drawer-nav .menu-my_menu-container li {
-    @include mq(sp) {
-        margin-bottom: 24px;
-        font-family: $sans;
-    }
-}
 
 
  /* ---footer--- */
