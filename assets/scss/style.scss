@@ -365,3 +365,15 @@ footer .copyright{
     margin: 0 auto;
     padding-top: 80px;
 }
+
+// 事業所からの問い合わせフォーム
+.wpforms-ontainer input .wpforms-field-medium {
+    max-width: inherent;
+}
+
+div.wpforms-container-full {
+    width: 60%;
+    @include mq(sp) {
+        width: 100%;
+    }
+}

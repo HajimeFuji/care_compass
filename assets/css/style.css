@@ -178,7 +178,7 @@ header li:hover {
 @media screen and (max-width: 599px) {
   .drawer-nav .drawer-menu .menu-item > a {
     display: flex;
-    padding: 0.75rem;
+    padding: 0.3rem 2.5rem 0.3rem 0.3rem;
     text-decoration: none;
     color: #ffffff;
     border-top: 1px solid rgba(255, 255, 255, 0.25);
@@ -828,3 +828,14 @@ footer .copyright {
   padding-top: 80px;
 }
 /*# sourceMappingURL=style.css.map */
+
+.wpforms-ontainer input .wpforms-field-medium {
+  max-width: inherent;
+}
+
+div.wpforms-container-full {
+  width: 60%;
+  @include mq(sp) {
+      width: 100%;
+  }
+}
