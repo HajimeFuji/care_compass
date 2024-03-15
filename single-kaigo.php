@@ -39,8 +39,7 @@ Template Post Type: page, post
                             <?php } ?>
                             <?php else: ?>
                                     <p class="detail-card__txt">公式サイトはありません</p>
-                            <?php endif; ?>
-                            
+                            <?php endif; ?>                         
                         </div>
                         <div class="detail-card__box">
                             <p>サービス概要：</p>

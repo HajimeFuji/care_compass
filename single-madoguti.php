@@ -9,9 +9,6 @@ Template Post Type: page, post
 <?php get_header(); ?>
 
 <article class="article">
-    <section id="sec1-title">
-        <!-- <h1><?php the_field('soudan_name'); ?></h1> -->
-    </section>
 
     <main class="main">
         <div class="main-flex">
@@ -55,6 +52,7 @@ Template Post Type: page, post
                             </a>
                         </div>
                     </div>
+                </div>
             </section>
 
         </div>
