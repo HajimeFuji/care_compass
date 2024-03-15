@@ -809,7 +809,7 @@ header li:hover {
   box-shadow: 0px 5px 15px 0px rgba(0, 128, 0, 0.96);
   background-color: #ffffff;
   margin: 0 auto;
-  padding: 4px 16px;
+  padding: 10px;
   font-size: 20px;
 }
 @media screen and (max-width: 599px) {
