@@ -239,7 +239,7 @@
     flex-flow: column;
     justify-content: space-between;
     width: 500px;
-    row-gap: 32px;
+    row-gap: 24px;
     margin-bottom: 8px;
     @include mq(sp) {
         width: 100%;

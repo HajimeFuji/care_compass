@@ -48,7 +48,7 @@ Template Post Type: page, post
                         </div>
                         <div class="search-single">
                             <h4 class="search-single__text">事業者の方へ</h4>
-                            <a href="<?php echo site_url('/contact') ?>" class="cta">
+                            <a href="<?php echo site_url('/contact') ?>" class="cta-single">
                                 <p class="search-single__text">情報の追加・修正の依頼はこちら</p>
                             </a>
                         </div>
