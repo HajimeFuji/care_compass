@@ -46,6 +46,12 @@ Template Post Type: page, post
                             <p>サービス概要：</p>
                             <p class="detail-card__txt"><?php echo nl2br(get_post_meta($post->ID, 'kaigo_service', true)); ?></p>
                         </div>
+                        <div class="search-single">
+                            <h4 class="search-single__text">事業者の方へ</h4>
+                            <a href="<?php echo site_url('/contact') ?>" class="cta">
+                                <p class="search-single__text">情報の追加・修正の依頼はこちら</p>
+                            </a>
+                        </div>
                     </div>
                 </div>
             </section>

@@ -266,6 +266,17 @@ header li:hover {
   border: 1px solid #777777;
   border-radius: 10px;
 }
+.cta-single {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #ffffff;
+  color: #404040;
+  text-align: center;
+  width: 100%;
+  border: 1px solid #777777;
+  border-radius: 10px;
+}
 .search .cta p {
   display: flex;
   text-align: center;
@@ -787,6 +798,37 @@ header li:hover {
     margin: 12px 0;
   }
 }
+.search-single {
+  display: flex;
+  flex-flow: column;
+  max-width: 1100px;
+  width: 100%;
+  align-items: start;
+  justify-content: center;
+  border-radius: 6px;
+  box-shadow: 0px 5px 15px 0px rgba(0, 128, 0, 0.96);
+  background-color: #ffffff;
+  margin: 0 auto;
+  padding: 4px 16px;
+  font-size: 20px;
+}
+@media screen and (max-width: 599px) {
+  .search-single {
+    width: 90%;
+    border-radius: 4px;
+    box-shadow: 0px 4px 8px 0px rgba(0, 128, 0, 0.96);
+    margin-bottom: 16px;
+  }
+}
+.search-single__text {
+  font-size: 18px;
+  margin: 4px 0;
+}
+@media screen and (max-width: 599px) {
+  .search-single__text {
+    font-size: 16px;
+  }
+}
 /* ---header--- */
 .header__pc {
   font-family: "Noto Serif JP";
@@ -828,14 +870,3 @@ footer .copyright {
   padding-top: 80px;
 }
 /*# sourceMappingURL=style.css.map */
-
-.wpforms-ontainer input .wpforms-field-medium {
-  max-width: inherent;
-}
-
-div.wpforms-container-full {
-  width: 60%;
-  @include mq(sp) {
-      width: 100%;
-  }
-}

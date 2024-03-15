@@ -317,6 +317,36 @@
     }
 }
 
+.search-single {
+    display: flex;
+    flex-flow: column;
+    max-width: 1100px;
+    width: 100%;
+    align-items: start;
+    justify-content: center;
+    border-radius: 6px;
+    box-shadow: 0px 5px 15px 0px rgba(0,128,0, 0.96);
+    background-color: $white;
+    margin: 0 auto;
+    padding: 4px 16px;
+    // margin-bottom: 40px;
+    font-size: 20px;
+    @include mq(sp) {
+        width: 90%;
+        border-radius: 4px;
+        box-shadow: 0px 4px 8px 0px rgba(0,128,0, 0.96);
+        margin-bottom: 16px;
+    }
+    &__text {
+        font-size: 18px;
+        margin: 4px 0;
+        @include mq(sp) {
+            font-size: 16px;
+            // margin: 12px 0;
+        }
+    }
+}
+
 /* ---header--- */
 
 .header__pc {
@@ -364,16 +394,4 @@ footer .copyright{
 .blogpost-form-wrap {
     margin: 0 auto;
     padding-top: 80px;
-}
-
-// 事業所からの問い合わせフォーム
-.wpforms-ontainer input .wpforms-field-medium {
-    max-width: inherent;
-}
-
-div.wpforms-container-full {
-    width: 60%;
-    @include mq(sp) {
-        width: 100%;
-    }
 }
